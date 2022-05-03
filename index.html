@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="output.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -25,51 +32,165 @@
       }
     </style>
   </head>
-  <body>
-    <!-- Rating state start -->
-    <section>
-      <div></div>
-      <h1>How did we do?</h1>
-      <p>
-        Please let us know how we did with your support request. All feedback is
-        appreciated to help us improve our offering!
-      </p>
-      <form action="">
-        <label for="rating1">
-          <input id="rating1" type="radio" name="rating" required />
-          1
-        </label>
-        <label for="rating2">
-          <input id="rating2" type="radio" name="rating" />
-          2
-        </label>
-        <label for="rating3">
-          <input id="rating3" type="radio" name="rating" />
-          3
-        </label>
-        <label for="rating4">
-          <input id="rating4" type="radio" name="rating" />
-          4
-        </label>
-        <label for="rating5">
-          <input id="rating5" type="radio" name="rating" />
-          5
-        </label>
-        <label for="submit">
-          <input id="submit" type="submit" />
-        </label>
-      </form>
-    </section>
-    <!-- Rating state end -->
-    <!-- Thank you state start -->
-    <section>
-      <h1>Thank you!</h1>
-      <p>You selected <span> </span> out of 5</p>
-      <p>
-        We appreciate you taking the time to give a rating. If you ever need
-        more support, don't hesitate to get in touch!
-      </p>
-    </section>
-    <!-- Thank you state end -->
+  <body class="font-overpass">
+    <main
+      class="flex min-h-screen items-center justify-center bg-verydarkblue p-6"
+    >
+      <!-- Rating state start -->
+      <section
+        class="card max-w-sm rounded-3xl bg-darkblue p-6 pb-8 drop-shadow-md sm:p-8"
+        id="rate-card"
+      >
+        <div class="w-fit rounded-full bg-darkblue p-4">
+          <img src="./images/icon-star.svg" alt="" />
+        </div>
+        <h1 class="mt-4 text-2xl font-bold text-white sm:mt-8">
+          How did we do?
+        </h1>
+        <p class="font-sm mt-2.5 text-lightgray sm:mt-3.5">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <form action="" class="mt-6" id="form">
+          <!-- Wraps radio inputs -->
+          <div class="flex justify-between">
+            <!-- Begin radio input -->
+            <div
+              class="flex h-11 w-11 items-center overflow-hidden rounded-full sm:h-12 sm:w-12"
+            >
+              <input
+                id="rating1"
+                type="radio"
+                name="rating"
+                required
+                class="peer appearance-none"
+                value="1"
+              />
+              <!-- State of radio input determines appearance of label -->
+              <label
+                for="rating1"
+                class="block flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-darkblue text-center align-middle text-lightgray hover:bg-accent hover:text-white peer-checked:bg-gray peer-checked:text-white peer-focus:bg-accent peer-focus:text-white"
+              >
+                <span class="inline-block font-bold text-inherit">1</span>
+              </label>
+            </div>
+            <!-- End radio input -->
+            <!-- Begin radio input -->
+            <div
+              class="flex h-11 w-11 items-center overflow-hidden rounded-full sm:h-12 sm:w-12"
+            >
+              <input
+                id="rating2"
+                type="radio"
+                name="rating"
+                required
+                class="peer appearance-none"
+                value="2"
+              />
+              <!-- State of radio input determines appearance of label -->
+              <label
+                for="rating2"
+                class="block flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-darkblue text-center align-middle text-lightgray hover:bg-accent hover:text-white peer-checked:bg-gray peer-checked:text-white peer-focus:bg-accent peer-focus:text-white"
+              >
+                <span class="inline-block font-bold text-inherit">2</span>
+              </label>
+            </div>
+            <!-- End radio input -->
+            <!-- Begin radio input -->
+            <div
+              class="flex h-11 w-11 items-center overflow-hidden rounded-full sm:h-12 sm:w-12"
+            >
+              <input
+                id="rating3"
+                type="radio"
+                name="rating"
+                required
+                class="peer appearance-none"
+                value="3"
+              />
+              <!-- State of radio input determines appearance of label -->
+              <label
+                for="rating3"
+                class="block flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-darkblue text-center align-middle text-lightgray hover:bg-accent hover:text-white peer-checked:bg-gray peer-checked:text-white peer-focus:bg-accent peer-focus:text-white"
+              >
+                <span class="inline-block font-bold text-inherit">3</span>
+              </label>
+            </div>
+            <!-- End radio input -->
+            <!-- Begin radio input -->
+            <div
+              class="flex h-11 w-11 items-center overflow-hidden rounded-full sm:h-12 sm:w-12"
+            >
+              <input
+                id="rating4"
+                type="radio"
+                name="rating"
+                required
+                class="peer appearance-none"
+                value="4"
+              />
+              <!-- State of radio input determines appearance of label -->
+              <label
+                for="rating4"
+                class="block flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-darkblue text-center align-middle text-lightgray hover:bg-accent hover:text-white peer-checked:bg-gray peer-checked:text-white peer-focus:bg-accent peer-focus:text-white"
+              >
+                <span class="inline-block font-bold text-inherit">4</span>
+              </label>
+            </div>
+            <!-- End radio input -->
+            <!-- Begin radio input -->
+            <div
+              class="flex h-11 w-11 items-center overflow-hidden rounded-full sm:h-12 sm:w-12"
+            >
+              <input
+                id="rating5"
+                type="radio"
+                name="rating"
+                required
+                class="peer appearance-none"
+                value="5"
+              />
+              <!-- State of radio input determines appearance of label -->
+              <label
+                for="rating5"
+                class="block flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-darkblue text-center align-middle text-lightgray hover:bg-accent hover:text-white peer-checked:bg-gray peer-checked:text-white peer-focus:bg-accent peer-focus:text-white"
+              >
+                <span class="inline-block font-bold text-inherit">5</span>
+              </label>
+            </div>
+            <!-- End radio input -->
+          </div>
+          <!-- End radio inputs -->
+          <label for="submit">
+            <input
+              id="submit"
+              class="mt-6 w-full cursor-pointer rounded-full bg-accent py-3 text-sm font-bold uppercase tracking-widest text-white hover:bg-white hover:text-accent focus:outline-0 focus-visible:bg-white focus-visible:text-accent sm:mt-8"
+              type="submit"
+              name="submit"
+            />
+          </label>
+        </form>
+      </section>
+      <!-- Rating state end -->
+      <!-- Thank you state start -->
+      <section
+        class="card flex hidden max-w-sm flex-col items-center rounded-3xl bg-darkblue p-6 drop-shadow-md sm:p-8"
+        id="thank-card"
+      >
+        <img src="./images/illustration-thank-you.svg" alt="" />
+        <h1 class="mt-6 text-2xl font-bold text-white">Thank you!</h1>
+        <p
+          class="font-sm mt-6 w-fit rounded-full bg-darkblue py-1.5 px-3 text-accent"
+        >
+          You selected <span id="rating-result"> </span> out of 5
+        </p>
+        <p class="font-sm mt-2.5 text-center text-lightgray">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </section>
+      <!-- Thank you state end -->
+    </main>
+    <script src="./index.js"></script>
   </body>
 </html>
